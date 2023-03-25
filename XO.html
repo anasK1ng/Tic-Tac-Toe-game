@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>        
+        <link rel="Stylesheet" href="gameStyle.css"/>
+        <title>Game</title>
+    </head>
+    <body>
+        <div class="section container start">
+            <div class="start__icon">
+                <span class="x__title x__icon">X</span>
+                <span class="o__title o__icon">O</span>
+            </div>
+            <h2 class="title__start">Tic Tac Toe game</h2>
+            <div class="btn btn__pc">New Game (with Robot)</div>
+            <div class="btn btn__player">Play with Player</div>     
+        </div>
+        
+        <header class="container score__container section">
+            <div class="gamer__profile">
+                
+                <label class="name__label">Name</label><span class="gamer__name"><input class="name__input" type="text" symbole='O'></span>
+                <span class="gamer__score"></span>
+                <div class="symbol">
+                    <div class="symbole__check o__symbol o__icon" SymbolClass="o__icon" symbol='O'>O</div>
+                    <div class="symbole__check x__symbol x__icon checked" SymbolClass="x__icon" symbol='X'>X</div>
+                </div>
+            </div>
+            <div class="gamer__profile">
+                <label class="name__label" >Name</label><span class="gamer__name"><input class="name__input" type="text"></span>
+                <span class="gamer__score"></span>
+                <div class="symbol">
+                    <div class="symbole__check o__symbol o__icon checked" SymbolClass="o__icon" symbol='O'>O</div>
+                    <div class="symbole__check x__symbol x__icon" SymbolClass="x__icon" symbol='X'>X</div>
+                </div>
+            </div>
+            <div class="btn btn__play" >Play</div>
+            <div class="btn btn__comeback-home" >Come back to Home</div>
+        </header>
+        <main>
+            <div class="tooltip display">
+                
+            </div>
+            <div class="container player__dashbord">
+                <div class="first__player__profile player">
+                    <div class="player__icon">
+                        <i class='bx bxs-user'></i>
+                        <span class="symbol__dashbord "></span>
+                    </div>
+                    <div class="player__name">anas</div>
+                    <div class="player__score">0</div>
+                    
+                </div>
+                <div class="second__player__profile player">
+                    <div class="player__icon">
+                        <i class='bx bxs-user'></i>
+                        <i class='bx bx-ghost'></i>
+                        <span class="symbol__dashbord"></span>
+                    </div>
+                    <div class="player__name"></div>
+                    <div class="player__score">0</div>                   
+                </div>
+            </div>
+            <div class="game section container">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </main>
+        <script type="module" src="Xoscript.js"></script>
+    </body>
+</html>

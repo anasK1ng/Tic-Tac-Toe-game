@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;900&display=swap');
+:root{
+    --second-color:#6D3B54;
+    --primary-color:#43142D;
+    --text-color:#BCA5AF;
+    --o-color:#EFEFDC;
+    --x-color:#005B4F;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.02ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: smooth !important;
+  }
+}
+html{
+
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Rubik",sans-serif;
+    font-size:1.3rem;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.section{
+    padding: 5rem 0 5rem;
+    height:100vh;
+}
+.container{
+    max-width: 700px;
+    margin: 0 auto;
+}
+main{
+    position: relative;
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .7rem;
+}
+.start__icon{
+    display: flex;
+    margin:0 auto;
+    
+}
+.x__title,.o__title{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.title__start{
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 0 .5rem 0;
+    color:var(--text-color);
+}
+.btn{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .8rem 1rem;
+    margin: 0 auto;
+    border-radius:.5rem ;
+    cursor: pointer;
+    width: 300px;
+}
+.btn__player{
+    background-color: var(--o-color);
+    color: var(--x-color);
+}
+
+.btn__pc{
+    color: var(--o-color);
+    background-color: var(--x-color);
+}
+
+.name__input{
+    background:none;
+    height: 1.9rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--text-color);
+}
+.name__label{
+    color: var(--text-color);
+    margin-right: .5rem;
+}
+.symbol{
+    background-color: var(--second-color);
+    display: flex;
+    
+
+    margin-top: .8rem;
+    cursor: pointer;
+    border-radius: .4rem;
+    padding: .3rem;
+}
+.symbole__check{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: .4rem;
+    height: 2rem;
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.8rem;
+    transition: .4s background-color;
+}
+.checked{
+
+    background-color: var(--primary-color);
+}
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,70px);
+    grid-template-rows: repeat(3,70px);
+    gap: .7rem;
+    justify-content: center;
+}
+.item{
+    border-radius: .35rem;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 900;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color:var(--second-color);
+}
+.x__icon{
+    color: var(--x-color);
+}
+.o__icon{
+    color: var(--o-color);
+    height: 2;
+}
+.score__container{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.gamer__profile{
+    min-width: 4rem;
+    padding: 1rem;
+
+}
+
+.btn__play{
+    position: absolute;
+    right: 55%;
+    bottom: 10%;
+    background-color: #005B4F;
+    color: aliceblue;
+}
+.btn__comeback-home{
+    position: absolute;
+    left: 55%;
+    bottom: 10%;
+    color: #005B4F;
+    background-color: aliceblue;
+}
+.player__dashbord{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.player{
+    padding: 1rem;
+    width: 160px;
+    background-color: #6D3B54;
+    border-radius: .4rem;
+    position: relative;
+}
+.player[role ="true"]{
+    border: 2px solid #EFEFDC;
+}
+
+.player__icon{
+    position: relative;
+    font-size: 5rem;
+    width: 100%;
+}
+.btn__play__again{
+    
+    background-color: #005B4F;
+    color: aliceblue;
+}
+.btn__back{
+    background-color: var(--primary-color);
+    color: aliceblue;
+}
+.player__icon,.player__name{
+
+        color: var(--text-color);
+        text-align: center;
+    }
+.player__name{
+    width: 150px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: llipsis;
+    font-size: 1.5rem;
+}
+.player__score{
+    position: absolute;
+    font-weight: 700;
+    font-size: 3.5rem;
+    top: .4rem;
+    left: 1rem;
+    color: var(--o-color);
+    /* right: 0; */
+}
+
+.symbol__dashbord{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width:  auto;
+    right: 0;
+    bottom: 20%;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: var(--primary-color);
+    border-radius: .4rem;
+    padding: .3rem .7rem;
+}
+
+.tooltip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: -13%;
+    transform: translateY(50%);
+    z-index: 100;
+    opacity: 1;
+    transition: .4s all;
+}
+.congrlate__container{
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    row-gap: 1.2rem;
+    background-color: var(--o-color);
+}
+.congrlate__header{
+    font-size: 1.9rem;
+    text-align: center;
+    color: var;
+}
+.congrate__symbol{
+    display: flex;
+    height: 100%;
+    width: 4rem;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #005B4F;
+    border-radius: .5rem;
+    margin: auto ;
+    color: var(--o-color);
+}
+.display{
+    transform: translateX(150%) scale(.1);
+    transition: .2s all;
+    opacity: 0;
+    z-index: -1;
+}
+/* .role{
+    border: 2px solid var(--o-color);
+} */
+
+
+.hide{
+    display: none;
+}
+
