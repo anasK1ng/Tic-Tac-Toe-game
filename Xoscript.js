@@ -1,4 +1,3 @@
-//test
 import  Player  from "./Class/Player.js";
 import  Game  from "./Class/Game.js";
 var FirstPlayer = new Player()
